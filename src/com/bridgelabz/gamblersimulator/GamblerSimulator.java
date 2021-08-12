@@ -3,7 +3,8 @@ package com.bridgelabz.gamblersimulator;
 public class GamblerSimulator {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		final int stake=100;
+		final int bets=1;
 
 	}
 
