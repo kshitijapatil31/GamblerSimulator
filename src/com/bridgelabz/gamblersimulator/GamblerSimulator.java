@@ -6,6 +6,7 @@ public class GamblerSimulator {
 	static int stake = 100;
 	static final int bets = 1;
 	static int flag = 0;
+	static int noOfDays = 20;
 
 	public static void winOrLoose() {
 		Random ran = new Random();
@@ -25,14 +26,18 @@ public class GamblerSimulator {
 		int winningAmount = (int) ((int) stake + (0.5 * stake));
 		int loosingAmount = (int) ((int) stake - (0.5 * stake));
 		// int winninCash=Math.random();
-		winOrLoose();
-		while(flag==0) {
-		if (stake == winningAmount) {
-          flag++;
-		}
-		if (stake == loosingAmount) {
-            flag++;
-		}
+		//winOrLoose();
+		for (int i = 1; i < noOfDays; i++) {
+			while (flag == 0) {
+				if (stake == winningAmount) {
+					System.out.println(i+winningAmount);
+					flag++;
+				}
+				if (stake == loosingAmount) {
+					System.out.println(i+winningAmount);
+					flag++;
+				}
+			}
 		}
 	}
 
